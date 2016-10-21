@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 
-MAINTAINER Santiago Rodriguez <scollazo@gmail.com>
+MAINTAINER dtomcej <danielt@getyardstick.com>
 
 #Config files and some ideas taken from
 # https://github.com/Epheo/docker-naxsi-proxy-waf/
