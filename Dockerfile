@@ -3,7 +3,7 @@ FROM ubuntu:trusty
 MAINTAINER dtomcej <danielt@getyardstick.com>
 
 #Config files and some ideas taken from
-# https://github.com/Epheo/docker-naxsi-proxy-waf/
+#https://github.com/Epheo/docker-naxsi-proxy-waf/
 
 #Change this and build the image to suit your needs by default, without needing to add parameters later
 ENV LEARNING_MODE yes
@@ -23,7 +23,6 @@ RUN apt-get update &&\
     sed -i 's/error import NoResource/resource import NoResource/g'  /usr/local/naxsi-0.50/contrib/naxsi-ui/nx_extract.py && \
     mkdir /etc/nginx/local-config && \
     mkdir /var/log/naxsi
-
 
 #Configuration files
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
