@@ -29,12 +29,12 @@ RUN apt-get update &&\
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
 ADD nginx/default /etc/nginx/sites-enabled/default
 ADD naxsi-ui/naxsi-ui.conf /usr/local/naxsi-0.50/contrib/naxsi-ui/naxsi-ui.conf
+ADD entrypoint.sh /entrypoint.sh
+
+RUN chmod 755 /entrypoint.sh
 
 #Ports
 EXPOSE 80
 EXPOSE 8081
-
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod 755 /entrypoint.sh
 
 CMD ["/entrypoint.sh"]
