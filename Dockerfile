@@ -34,7 +34,7 @@ ADD naxsi-ui/naxsi-ui.conf /usr/local/naxsi-0.50/contrib/naxsi-ui/naxsi-ui.conf
 EXPOSE 80
 EXPOSE 8081
 
-COPY entrypoint.sh /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
 CMD ["/entrypoint.sh"]
